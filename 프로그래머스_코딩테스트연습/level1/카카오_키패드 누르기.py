@@ -34,15 +34,12 @@ def solution(numbers, hand):
     answer = ''
     left_pad = [1,4,7]
     right_pad = [3,6,9]
-    middle_pad = [2,5,8,0]
     key_loc = {n : ((n-1)//3, (n+2)%3) for n in range(1,10)}
     key_loc[0] = (3,1)
     key_loc[10] = (3,0)
     key_loc[12] = (3,2)
     lpos = 10
     rpos = 12
-    #for key,value in zip(key_loc.keys(), key_loc.values()):
-    #    print(key,value)
     
     def distance(x1, x2):
         return abs(x1[0]-x2[0]) + abs(x1[1]-x2[1])
