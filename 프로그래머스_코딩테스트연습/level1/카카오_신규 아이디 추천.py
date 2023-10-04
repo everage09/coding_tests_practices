@@ -55,10 +55,7 @@ def solution(new_id):
     def removeDot(id):
         return id.strip(".")
     def checkEmpty(id):
-        if len(id) == 0:
-            return "a"
-        else:
-            return id
+        return "a" if len(id) == 0 else id
     def checkLength(id):
         if len(id) >= 16:
             id = id[:15].strip('.')
